@@ -152,9 +152,9 @@
       Contact setup:
       1) Preferred once a Formspree form exists: set FORMSPREE_ID below
          (create a form at https://formspree.io and send notifications
-         to hello@marcustravis.com, not a personal Gmail address).
+         to offers@becringeorfail.com).
       2) Until then, the form falls back to a prefilled mailto for
-         hello@marcustravis.com, which already forwards via Email Routing.
+         offers@becringeorfail.com, which already forwards via Email Routing.
     -->
     <form id="offer-form" method="POST" action="#">
       <div>
@@ -176,12 +176,12 @@
       <input type="hidden" name="_subject" value="Offer for becringeorfail.com">
       <button type="submit">Make an offer</button>
     </form>
-    <p class="or">Or email <a href="mailto:hello@marcustravis.com?subject=Offer%20for%20becringeorfail.com">hello@marcustravis.com</a></p>
+    <p class="or">Or email <a href="mailto:offers@becringeorfail.com?subject=Offer%20for%20becringeorfail.com">offers@becringeorfail.com</a></p>
     <p class="status" id="status" role="status"></p>
   </main>
   <script>
     const FORMSPREE_ID = ""; // e.g. "xyzabcde"
-    const MAILTO = "hello@marcustravis.com";
+    const MAILTO = "offers@becringeorfail.com";
     const form = document.getElementById("offer-form");
     const status = document.getElementById("status");
 
@@ -222,7 +222,7 @@
         form.reset();
         status.textContent = "Thanks. Your offer is on its way.";
       } catch (err) {
-        status.textContent = "The form couldn’t send. Email hello@marcustravis.com instead.";
+        status.textContent = "The form couldn’t send. Email offers@becringeorfail.com instead.";
       }
     });
   </script>
